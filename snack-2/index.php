@@ -15,7 +15,7 @@
 </head>
 <body>
         <?php
-            if (strlen($name) > 3 && strpos($mail, "@") && ctype_digit($age) ) {
+            if (strlen($name) > 3 && strpos($mail, "@") !== false && strpos($mail, ".") !== false && ctype_digit($age) ) {
                 echo "Accesso riuscito";
             } else {
                 echo "Accesso Negato: <br>
